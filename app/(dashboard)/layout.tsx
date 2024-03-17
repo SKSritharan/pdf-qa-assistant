@@ -1,3 +1,5 @@
+import { UserButton } from "@clerk/nextjs";
+
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="h-full relative">
@@ -5,6 +7,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
         {/* todo sidebar */}
       </div>
       <main className="md:pl-72 pb-10">
+        <UserButton afterSignOutUrl="/" />
         {/* todo navbar */}
         {children}
       </main>
