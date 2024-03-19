@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useAuth } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 export const LandingHero = () => {
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const { isSignedIn } = useAuth();
 
   return (
     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
