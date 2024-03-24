@@ -5,7 +5,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+npx drizzle-kit push:pg
 npm run dev
+npx drizzle-kit studio
 # or
 yarn dev
 # or

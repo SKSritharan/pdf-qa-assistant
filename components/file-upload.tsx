@@ -4,7 +4,7 @@ import { Inbox, Loader2 } from "lucide-react";
 import React from "react";
 import { useDropzone } from "react-dropzone";
 // import axios from "axios";
-// import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 // import { useRouter } from "next/navigation";
 
 const FileUpload = () => {
@@ -18,7 +18,7 @@ const FileUpload = () => {
       const file = acceptedFiles[0];
       if (file.size > 10 * 1024 * 1024) {
         // bigger than 10mb!
-        // toast.error("File too large");
+        toast.error("File too large");
         return;
       }
     },
