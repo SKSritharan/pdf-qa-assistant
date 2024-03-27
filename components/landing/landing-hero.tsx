@@ -18,22 +18,17 @@ export const LandingHero = () => {
         </h1>
         <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
           Simplify your PDF document analysis and question answering process
-          with our PDF Q&A Assistant.
+          with our PDF Q&A Assistant. Whether you are a student, researcher, or
+          professional, streamline your workflow and boost productivity.
         </p>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button variant="outline" className="rounded-full">
-            Get Started
+            {isSignedIn ? "Go to Dashboard" : "Get Started"}
           </Button>
         </Link>
       </div>
       <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <Image
-          alt="Flowbite logo"
-          width={400}
-          height={400}
-          layout="responsive"
-          src="/logo.png"
-        />
+        <Image alt="Flowbite logo" width={400} height={400} src="/logo.png" />
       </div>
     </div>
   );
