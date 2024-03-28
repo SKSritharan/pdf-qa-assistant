@@ -50,10 +50,10 @@ export const Sidebar = () => {
           </div>
         </Link>
         {isLoading ? (
-          <>
+          <div className="flex flex-col items-center justify-center h-full w-full">
             <Loader2 className="h-10 w-10 text-red-500 animate-spin" />
             <p className="mt-2 text-sm text-slate-400">Loading...</p>
-          </>
+          </div>
         ) : (
           <div className="space-y-1 mt-10 overflow-y-auto h-full overflow-x-hidden">
             {chats.length === 0 ? (

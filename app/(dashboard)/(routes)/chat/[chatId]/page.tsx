@@ -29,13 +29,13 @@ const ChatPage = async ({ params: { chatId } }: Props) => {
   const currentChat = _chats.find((chat) => chat.id === parseInt(chatId));
 
   return (
-    <div className="flex max-h-screen">
+    <div className="flex min-h-screen">
       {/* PDF viewer */}
-      <div className="flex-1 p-4 max-h-screen">
+      <div className="flex-1 p-4">
         <PDFViewer pdf_url={currentChat?.pdfUrl || ""} />
       </div>
       {/* Chat component */}
-      <div className="flex-1 border-l border-gray-200 overflow-y-auto max-h-screen">
+      <div className="flex-1 border-l border-gray-200 overflow-y-auto">
         <ChatComponent chatId={parseInt(chatId)} />
       </div>
     </div>
